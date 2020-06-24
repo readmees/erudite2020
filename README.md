@@ -26,10 +26,10 @@ Besides the recommendation, Sigrow also asked for a implementation design for th
 By providing Sigrow a recommendation about how to optimize the plant growth using machine learning and implementing these techniques for them, we hope Sigrow can optimize the plant growth in the future and stay ahead of the curve.
 
 ## The /erudite2020 Github repository
-This repository contains of two directories. [<Final Report for University of Amsterdam>](<erudite2020/Final Report for University of Amsterdam/>) contains the Final Report for the Univisity of Amsterdam. 'erudite2020/Polynomial Regression and Random Forest/' contains the models made for Sigrow and the data. THe data is retrieved from the Automonous greenhouse challenge, a challenge where 5 artificial intelligence tried to grow the best and most environmental friendly plants. The source of the data can be found [here](https://data.4tu.nl/repository/uuid:e4987a7b-04dd-4c89-9b18-883aad30ba9a#DATA).
+This repository contains of two repositories. The ['/Final Report/'](<Final Report/>) repository contains the report we wrote for the Univisity of Amsterdam. In the ['/Polynomial Regression and Random Forest/'](<Polynomial Regression and Random Forest/>) repository the models made for Sigrow and the data can be found. The data is retrieved from the Automonous greenhouse challenge, a challenge where five teams tried to grow the best and most environmental friendly plants. The source of the data can be found [here](https://data.4tu.nl/repository/uuid:e4987a7b-04dd-4c89-9b18-883aad30ba9a#DATA).
 
 ### Random forest
-[hm](/Polynomial Regression and Random Forest/randomforest.ipynb) is used to find the feature importance in the data. The dataset used is
+[randomforest.ipynb](<Polynomial Regression and Random Forest/randomforest.ipynb/>) is used to find the feature importance in the data. The dataset used is
 
 
 
