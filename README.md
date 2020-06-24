@@ -37,4 +37,4 @@ This repository contains of two repositories. The ['/Final Report/'](<Final Repo
 
 For more clarification of the what the features mean, there is a relevant part of the [ReadMe.pdf](<Polynomial Regression and Random Forest/data/DataReadMe.pdf/>) of the data below.
 *Column heading Parameter description Unit Interval Dataset name Type Comments Data collection*
-![](https://imgur.com/iAl45aq)
+![](https://imgur.com/iAl45aq.png)
