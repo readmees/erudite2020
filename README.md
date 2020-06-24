@@ -29,7 +29,7 @@ By providing Sigrow a recommendation about how to optimize the plant growth usin
 This repository contains of two directories. [Final Report for University of Amsterdam](erudite2020/Final Report for University of Amsterdam/) contains the Final Report for the Univisity of Amsterdam. 'erudite2020/Polynomial Regression and Random Forest/' contains the models made for Sigrow and the data. THe data is retrieved from the Automonous greenhouse challenge, a challenge where 5 artificial intelligence tried to grow the best and most environmental friendly plants. The source of the data can be found [here](https://data.4tu.nl/repository/uuid:e4987a7b-04dd-4c89-9b18-883aad30ba9a#DATA).
 
 ### Random forest
-'erudite2020/Polynomial Regression and Random Forest/randomforest.ipynb' is used to find the feature importance in the data. The dataset used is
+[hm](/Polynomial Regression and Random Forest/randomforest.ipynb) is used to find the feature importance in the data. The dataset used is
 
 
 
