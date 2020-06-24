@@ -29,14 +29,12 @@ By providing Sigrow a recommendation about how to optimize the plant growth usin
 This repository contains of two repositories. The ['/Final Report/'](<Final Report/>) repository contains the report we wrote for the Univisity of Amsterdam. In the ['/Polynomial Regression and Random Forest/'](<Polynomial Regression and Random Forest/>) repository the models made for Sigrow and the data can be found. The data is retrieved from the Automonous greenhouse challenge, a challenge where five teams tried to grow the best and most environmental friendly plants. The source of the data can be found [here](https://data.4tu.nl/repository/uuid:e4987a7b-04dd-4c89-9b18-883aad30ba9a#DATA). The data is devided in six directories, one for every team and one for a reference (plants grown without the help of AI). Each of those directories contains in 5 datasets. CropManagement.csv, Greenhouse_climate.csv, Irrigation.csv, Production.csv, ResourceCalculations.csv and vip.csv. 
 
 ### Random forest
-[randomforest.ipynb](<Polynomial Regression and Random Forest/randomforest.ipynb/>) is used to find the feature importance in the datasets Greenhouse_climate.csv and vip.csv for different teams. The feature importances are found by 
+[randomforest.ipynb](<Polynomial Regression and Random Forest/randomforest.ipynb/>) is used to find the feature importance in the dataset Greenhouse_climate.csv for different teams. The feature importances are found by using a random forest classifier. The results shown in the figures below are the feature importances of the features in the greenhouse climate datasets.
 
 ![](https://imgur.com/mMthsX6.png) ![](https://imgur.com/xPIJtlk.png) 
-
-![](https://imgur.com/z6EMi6h.png) ![](https://imgur.com/ABIU4m2.png) 
-
+![](https://imgur.com/ABIU4m2.png) ![](https://imgur.com/mbGukqX.png)
 ![](https://imgur.com/5gauDK6.png) ![](https://imgur.com/jIrGrvA.png) 
 
-![](https://imgur.com/mbGukqX.png)
-
-
+For more clarification of the what the features mean, there is a relevant part of the [ReadMe.pdf](<Polynomial Regression and Random Forest/data/DataReadMe.pdf/>) of the data below.
+*Column heading Parameter description Unit Interval Dataset name Type Comments Data collection*
+![](https://imgur.com/iAl45aq)
