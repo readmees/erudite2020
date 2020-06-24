@@ -1,4 +1,7 @@
 # Tweedejaarsproject: project course University of Amsterdam in cooperation with Sigrow
+## About us
+Erudite is a group of 5 motivated Artificial Intelligence second year bachelor students. We are Riemer Dijkstra, Otto Márton, Dionne Gantzert, Johannes Roelink and Mees Meester. For the 'Tweedejaarsproject' our group has been assigned to a company, Sigrow. They came up with a challenge for us to solve in four weeks.
+
 ## Introduction
 *This introduction can be found in #TODO: add file*
 
@@ -12,7 +15,7 @@ Over the years, Sigrow has gathered information about the environment in the gre
 
 When Sigrow provided the data there were two significant problems:
 The data lacked information about the plants.
-The amount of data was scarce. 
+The amount of data was scarce. The task Sigrow had for us was to optimize the plant growth by optimizing the greenhouse climate. 
 
 Sigrow has only collected data about the environment of the plants, but not the plants themselves. The data did not contain any information about which kind of plant it was, nor the height, stem diameter or weight. In addition to this, the amount of data was so scarce that it was impossible to split the dataset into a training and test set. 
 
@@ -21,5 +24,5 @@ Because of these two problems, a new challenge was set up. Instead of optimizing
 Besides the recommendation, Sigrow also asked for a implementation design for these feature optimization techniques. Since the data is not usable, the results would be unreliable, but an implementation, imagining the data is complete, would be. 
 
 By providing Sigrow a recommendation about how to optimize the plant growth using machine learning and implementing these techniques for them, we hope Sigrow can optimize the plant growth in the future and stay ahead of the curve. 
+##The /erudite2020 Github repository
 
-## This github repository
