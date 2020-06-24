@@ -26,4 +26,4 @@ Besides the recommendation, Sigrow also asked for a implementation design for th
 By providing Sigrow a recommendation about how to optimize the plant growth using machine learning and implementing these techniques for them, we hope Sigrow can optimize the plant growth in the future and stay ahead of the curve.
 
 ## The /erudite2020 Github repository
-This repository contains of two directories. 'erudite2020/Final Report for University of Amsterdam/' contains the Final Report for the Univisity of Amsterdam. 'erudite2020/Polynomial Regression and Random Forest/' contains the models made for Sigrow and used data.
+This repository contains of two directories. 'erudite2020/Final Report for University of Amsterdam/' contains the Final Report for the Univisity of Amsterdam. 'erudite2020/Polynomial Regression and Random Forest/' contains the models made for Sigrow and the data. THe data is retrieved from the Automonous greenhouse challenge, a challenge where 5 artificial intelligence tried to grow the best and most environmental friendly plants. The source of the data can be found [here] (https://data.4tu.nl/repository/uuid:e4987a7b-04dd-4c89-9b18-883aad30ba9a#DATA)
