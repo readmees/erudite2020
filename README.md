@@ -1,4 +1,4 @@
-# Polynomial fitting and feature importance on Automonous greenhouse data
+# Polynomial fitting and random forrest on Autonomous Greenhouses 1nd Edition data
 ## About us
 Erudite is a group of 5 motivated Artificial Intelligence second year bachelor students. We are Riemer Dijkstra, Otto Márton, Dionne Gantzert, Johannes Roelink and Mees Meester. For the 'Tweedejaarsproject' our group has been assigned to a company, Sigrow. They came up with a challenge for us to solve in four weeks.
 
