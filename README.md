@@ -42,5 +42,5 @@ For more clarification of the what the features mean, there is a relevant part o
 
 As you can see in every dataset COair, Tair, HumDef and RHair are the most important features of the greenhouse climate dataset. CO$^2$, Temparature and Humidity are together with light indeed the most important features for optimizing growth. The light measurements are devided in outdoor and indoor light and are in other datasets.
 ### Polynomial fit
-
+Because of missing data points and inconsistent units of measurement, the data had to be cleaned in order to be useful. Missing data points were replaced with the previously known value using ffill, a built in function of the Pandas python library. If the first datapoint was missing, we replaced the NaN value with the next known value using Bfill, also from the Pandas library. For ease of use we combined all the data in one large python dictionary, with the keys being the different teams that competed for the challenge and the values being the environmental and plant data.
 
