@@ -1,6 +1,5 @@
 # Polynomial fitting and random forrest on Autonomous Greenhouses 1nd Edition data
 ![](https://imgur.com/3vLMjnG.gif)
-![](https://i.imgur.com/U4IrLEq.mp4)
 ## About us
 Erudite is a group of 5 motivated Artificial Intelligence second year bachelor students. We are Riemer Dijkstra, Otto Márton, Dionne Gantzert, Johannes Roelink and Mees Meester. For the 'Tweedejaarsproject' our group has been assigned to a company, Sigrow. They came up with a challenge for us to solve in four weeks.
 
@@ -49,7 +48,7 @@ Over the years, Sigrow has gathered information about the environment in the gre
 ### Polynomial fit
 *Before going in depth it is important to realize that the results are found on a very scarce amount of data, so these results are not reliable, but may help getting results in the future.*
 
-Results can be found on the web page https://readmees.github.io/polynomial_fit.html, with the [polynomial_fit.ipynb](<Polynomial Regression and Random Forest/polynomial_fit.ipynb/>)  file you can generate even more results yourself. More than 45 graphs are plotted to understand certain features. 
+Results can be found on the web page https://readmees.github.io/polynomial_fit.html, with the [polynomial_fit.ipynb](<Polynomial Regression and Random Forest/polynomial_fit.ipynb/>)  file you can generate even more results yourself, [here](https://i.imgur.com/U4IrLEq.mp4) is a short example how. More than 45 graphs are plotted to understand certain features. 
 #### Carbon Dioxide concentration
 In ‘The optimal CO2 concentrations for the growth of three perennial grass species’ (Zeng et al., 2018) Zeng et al. examine the growth of three perennial grasses in growth chambers with different CO2 ppm values. They found an ideal total biomass value of 915ppm (see figure 2). As shown in figure 2 Zeng et al. found this maximum by fitting 2nd degree polynomials throughout their measurements of 400, 600, 800, 1000 and 1200 ppm CO2.  With the autonomous greenhouse data a 2nd degree polynomial is heavily overfit, if however, the data is fitted by a 3rd degree polynomial. An overall maximum production value (of class A) is found with a CO2 concentration of +-947 ppm (see figure 1). All teams started with a relative low concentration of CO2 and increased it while the plants grew as shown in figure 3.
 ![](https://imgur.com/jSb8ixx.png)
