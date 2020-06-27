@@ -39,10 +39,10 @@ def visualize_time(data, datasets, feature, feature_name, ylabel, csv_file='GHCl
     # Plot the average taken every week and their trendlines
     plt.title(f'{feature_name} average every week for every dataset, with trendlines'.capitalize())
     for dataset in datasets:
-        weekly_HumDef = []
+        weekly_feature_value = []
         for i in range(len(data[dataset][csv_file][time])//2016):
-            weekly_HumDef.append(data[dataset][csv_file][feature][i*2016:i*2016+2016].mean())
-        x, y = np.arange(16), weekly_HumDef
+            weekly_feature_value.append(data[dataset][csv_file][feature][i*2016:i*2016+2016].mean())
+        x, y = np.arange(16), weekly_feature_value
         a,b = np.polyfit(list(x),list(y),1)
         x_trend = np.linspace(min(x), max(x), 2)
         plot = plt.plot(x, y, '.', label=dataset)
@@ -53,7 +53,7 @@ def visualize_time(data, datasets, feature, feature_name, ylabel, csv_file='GHCl
     plt.legend()
     plt.show()
 
-def calculate_weekly_data(data, datasets):
+def calculate_weekly_data(features, data, datasets):
     '''
     This function devides the data in weeks, which means instead of taking an average feature
     value for every team for every relevant feature. The average feature value of a week per team will
@@ -61,22 +61,21 @@ def calculate_weekly_data(data, datasets):
     and the data will be devided in weeks, there is chosen not to take the data of the first week
     into account.
     '''
-    # Create a dictionary with weekly data to create more usuable data
-    weekly_CO2, weekly_HumDef, weekly_temp = [], [], []
-    weekly_prodA, weekly_prodB = [], []
-    for team in datasets:
-        for i in range(1,len(data[team]['GHClim']['GHtime'])//2016):
-            weekly_HumDef.append(data[team]['GHClim']['HumDef'][i*2016:i*2016+2016].mean())
-            weekly_CO2.append(data[team]['GHClim']['CO2air'][i*2016:i*2016+2016].mean())
-            weekly_temp.append(data[team]['GHClim']['Tair'][i*2016:i*2016+2016].mean())
-        # Add weekly production sum (both A and B)
-        # Timestamp is per day
-        for i in range(1,len(data[team]['prod']['time'])//7):
-            weekly_prodA.append(np.mean(data[team]['prod']['ProdA_num'][i*7:i*7+7]))
-            weekly_prodB.append(np.mean(data[team]['prod']['ProdB_num'][i*7:i*7+7]))
-    weekly_data  = {'CO2air':weekly_CO2, 'HumDef':weekly_HumDef,
-                            'Tair':weekly_temp, 'prodA':weekly_prodA,
-                            'prodB':weekly_prodB}
+    features = list(features)
+    features.extend(['prodA', 'prodB'])
+    weekly_data = dict()
+    for feature in features:
+        feature_weekly_data = []
+        for team in datasets:
+            if 'prod' in feature:
+                for i in range(1,len(data[team]['GHClim']['GHtime'])//2016):
+                    feature_weekly_data.append(data[team]['GHClim'][feature][i*2016:i*2016+2016].mean())
+            # Add weekly production sum (both A and B)
+            # Timestamp is per day
+            else:
+                for i in range(1,len(data[team]['prod']['time'])//7):
+                    feature_weekly_data.append(np.mean(data[team]['prod'][feature][i*7:i*7+7]))
+        weekly_data[feature] = feature_weekly_data
     print("""The code is succesfully runned and the weekly data not
           devided by team is now in the variable 'weekly_data_total'""")
     return weekly_data
