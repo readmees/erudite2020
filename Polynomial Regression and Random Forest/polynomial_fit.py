@@ -77,6 +77,6 @@ def calculate_weekly_data(data, datasets):
     weekly_data  = {'CO2air':weekly_CO2, 'HumDef':weekly_HumDef,
                             'Tair':weekly_temp, 'prodA':weekly_prodA,
                             'prodB':weekly_prodB}
-    print("The code is succesfully runned and the weekly data not\
-          devided by team is now in the variable 'weekly_data_total'")
+    print("""The code is succesfully runned and the weekly data not
+          devided by team is now in the variable 'weekly_data_total'""")
     return weekly_data
