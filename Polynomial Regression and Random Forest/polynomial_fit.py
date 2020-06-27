@@ -10,8 +10,8 @@ import numpy as np
 def visualize_time(data, datasets, feature, feature_name, ylabel, csv_file='GHClim', time='GHtime'):
     '''
     This function visualizes four graphs: one with 33133 timestamps and a feature value of 5 minutes
-    for every dataset given in the datasets parameter, one with their trendlines and one with
-    samples taken every week (and trendlines) the last one with the average feature value every week.
+    for every dataset given in the datasets parameter, one with their trendlines and the last one with
+    the average feature value every week.
     '''
     # Plot 33133 timestamps of 5 minutes
     plt.title(f'{feature_name} with 33133 timestamps of 5 minutes for every dataset'.capitalize())
@@ -32,19 +32,6 @@ def visualize_time(data, datasets, feature, feature_name, ylabel, csv_file='GHCl
         x_trend = np.linspace(min(x), max(x), 2)
         plt.plot(x_trend, x_trend*a+b, label=dataset)
     plt.xlabel('Timestamp every 5 minutes')
-    plt.ylabel(ylabel)
-    plt.legend()
-    plt.show()
-
-    # Plot samples taken every week and their trendlines
-    plt.title(f'{feature_name} sample every week for every dataset, with trendlines'.capitalize() )
-    for dataset in datasets:
-        x, y = np.arange(16), data[dataset][csv_file][feature][::2016][1:]
-        a,b = np.polyfit(list(x),list(y),1)
-        x_trend = np.linspace(min(x), max(x), 2)
-        plot = plt.plot(x, y, '.', label=dataset)
-        plt.plot(x_trend, x_trend*a+b,color=plot[0].get_color())
-    plt.xlabel('Week')
     plt.ylabel(ylabel)
     plt.legend()
     plt.show()
