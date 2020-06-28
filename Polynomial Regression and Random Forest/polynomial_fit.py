@@ -66,14 +66,14 @@ def calculate_weekly_data(features, data, datasets):
     for feature in features:
         feature_weekly_data = []
         for dataset in datasets:
-            # take the mean per week of all the 5 minute incremental datapoints
             if 'Prod' not in feature:
+                # Take the mean per week of all the 5 minute incremental datapoints.
                 for i in range(1,len(data[dataset]['GHClim']['GHtime'])//2016):
                     feature_weekly_data.append(data[dataset]['GHClim'][feature][i*2016:i*2016+2016].mean())
-            # Sum the total production per week
             else:
+                # Take the mean of the total production per day in a week.
                 for i in range(1,len(data[dataset]['prod']['time'])//7):
-                    feature_weekly_data.append(sum(data[dataset]['prod'][feature][i*7:i*7+7]))
+                    feature_weekly_data.append(data[dataset]['prod'][feature][i*7:i*7+7].mean())
         weekly_data[feature] = feature_weekly_data
     print("The code has succesfully ran and the data is divided into weekly data (see the 'weekly_data' variable)")
     return weekly_data
