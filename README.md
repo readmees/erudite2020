@@ -31,7 +31,7 @@ We tried to make the Jupyter Notebook as user friendly as possible, so if all ce
 Because of missing data points and inconsistent units of measurement, the data had to be cleaned in order to be useful. Missing data points were replaced with the previously known value using ffill, a built in function of the Pandas Python library. If the first datapoint was missing, we replaced the NaN value with the next known value using Bfill, also from the Pandas library. For ease of use we combined all the data in one large Python dictionary, with the keys being the different teams that competed for the challenge and the values being the environmental and plant data.
 
 ### Random forest
-[randomforest.ipynb](<Polynomial Regression and Random Forest/randomforest.ipynb/>) is used to find the feature importance in the dataset Greenhouse_climate.csv for different teams. The feature importances are found by using a random forest classifier. The results shown in the figures below are the feature importances of the features in the greenhouse climate datasets.
+[random_forest.ipynb](<Polynomial Regression and Random Forest/random_forest.ipynb/>) is used to find the feature importance in the dataset Greenhouse_climate.csv for different teams. The feature importances are found by using a random forest classifier. The results shown in the figures below are the feature importances of the features in the greenhouse climate datasets.
 
 ![](https://imgur.com/mMthsX6.png) ![](https://imgur.com/xPIJtlk.png) 
 ![](https://imgur.com/ABIU4m2.png) ![](https://imgur.com/mbGukqX.png)
