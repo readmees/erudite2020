@@ -71,7 +71,7 @@ def calculate_weekly_data(features, data, datasets):
             if 'Prod' not in feature:
                 for i in range(1,len(data[dataset]['GHClim']['GHtime'])//2016):
                     feature_weekly_data.append(data[dataset]['GHClim'][feature][i*2016:i*2016+2016].mean())
-            # Add weekly the average daily production per week (for both class A and B)
+            # Add weekly the total production per week
             # Timestamp is per day
             else:
                 for i in range(1,len(data[dataset]['prod']['time'])//7):
