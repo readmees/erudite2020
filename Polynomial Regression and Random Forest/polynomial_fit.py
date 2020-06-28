@@ -13,7 +13,7 @@ def visualize_time(data, datasets, feature, feature_name, ylabel, csv_file='GHCl
     for every dataset given in the datasets parameter, one with their trendlines and the last one with
     the average feature value every week.
     '''
-    # Plot 33133 timestamps of 5 minutes
+    # Plot 33133 timestamps of 5 minutes.
     plt.title(f'{feature_name} with 33133 timestamps of 5 minutes for every dataset'.capitalize())
     for dataset in datasets:
         x, y = data[dataset][csv_file][time], data[dataset][csv_file][feature]
@@ -24,7 +24,7 @@ def visualize_time(data, datasets, feature, feature_name, ylabel, csv_file='GHCl
     plt.legend()
     plt.show()
 
-    # Plot trendlines of all the 33133 datapoints
+    # Plot trendlines of all the 33133 datapoints.
     plt.title(f'Trendlines of {feature_name} of all the 33133 datapoints')
     for dataset in datasets:
         x, y = data[dataset][csv_file][time], data[dataset][csv_file][feature]
@@ -36,7 +36,7 @@ def visualize_time(data, datasets, feature, feature_name, ylabel, csv_file='GHCl
     plt.legend()
     plt.show()
 
-    # Plot the average taken every week and their trendlines
+    # Plot the average taken every week and their trendlines.
     plt.title(f'{feature_name} average every week for every dataset, with trendlines'.capitalize())
     for dataset in datasets:
         weekly_feature_value = []
