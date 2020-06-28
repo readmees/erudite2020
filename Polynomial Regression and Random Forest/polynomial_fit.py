@@ -55,11 +55,10 @@ def visualize_time(data, datasets, feature, feature_name, ylabel, csv_file='GHCl
 
 def calculate_weekly_data(features, data, datasets):
     '''
-    This function devides the data in weeks, which means instead of taking an average feature
+    This function divides the data in weeks, which means instead of taking an average feature
     value for every team for every relevant feature. The average feature value of a week per team will
     be taken and the associated production in that week. Because the first week was not that productive
-    and the data will be devided in weeks, there is chosen not to take the data of the first week
-    into account.
+    it was decided not to take the data of the first week into account.
     '''
     features = list(features)
     features.extend(['ProdA_num', 'ProdB_num'])
@@ -67,15 +66,14 @@ def calculate_weekly_data(features, data, datasets):
     for feature in features:
         feature_weekly_data = []
         for dataset in datasets:
-            # Timestamp is per five minutes
+            # take the mean per week of all the 5 minute incremental datapoints
             if 'Prod' not in feature:
                 for i in range(1,len(data[dataset]['GHClim']['GHtime'])//2016):
                     feature_weekly_data.append(data[dataset]['GHClim'][feature][i*2016:i*2016+2016].mean())
-            # Add weekly the total production per week
-            # Timestamp is per day
+            # Sum the total production per week
             else:
                 for i in range(1,len(data[dataset]['prod']['time'])//7):
                     feature_weekly_data.append(sum(data[dataset]['prod'][feature][i*7:i*7+7]))
         weekly_data[feature] = feature_weekly_data
-    print("The code is succesfully runned and the data is devided in weekly data (see the 'weekly_data' variable)")
+    print("The code has succesfully ran and the data is divided into weekly data (see the 'weekly_data' variable)")
     return weekly_data
