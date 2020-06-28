@@ -62,20 +62,20 @@ def calculate_weekly_data(features, data, datasets):
     into account.
     '''
     features = list(features)
-    features.extend(['prodA', 'prodB'])
+    features.extend(['ProdA_num', 'ProdB_num'])
     weekly_data = dict()
     for feature in features:
         feature_weekly_data = []
-        for team in datasets:
-            if 'prod' in feature:
-                for i in range(1,len(data[team]['GHClim']['GHtime'])//2016):
-                    feature_weekly_data.append(data[team]['GHClim'][feature][i*2016:i*2016+2016].mean())
-            # Add weekly production sum (both A and B)
+        for dataset in datasets:
+            # Timestamp is per five minutes
+            if 'Prod' not in feature:
+                for i in range(1,len(data[dataset]['GHClim']['GHtime'])//2016):
+                    feature_weekly_data.append(data[dataset]['GHClim'][feature][i*2016:i*2016+2016].mean())
+            # Add weekly the average daily production per week (for both class A and B)
             # Timestamp is per day
             else:
-                for i in range(1,len(data[team]['prod']['time'])//7):
-                    feature_weekly_data.append(np.mean(data[team]['prod'][feature][i*7:i*7+7]))
+                for i in range(1,len(data[dataset]['prod']['time'])//7):
+                    feature_weekly_data.append(sum(data[dataset]['prod'][feature][i*7:i*7+7]))
         weekly_data[feature] = feature_weekly_data
-    print("""The code is succesfully runned and the weekly data not
-          devided by team is now in the variable 'weekly_data_total'""")
+    print("The code is succesfully runned and the data is devided in weekly data (see the 'weekly_data' variable)")
     return weekly_data
