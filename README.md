@@ -1,7 +1,7 @@
 # Polynomial fitting and random forrest on Autonomous Greenhouses 1st Edition data
 ![](https://imgur.com/3vLMjnG.gif)
 ## About us
-Erudite is a group of 5 motivated Artificial Intelligence second year bachelor students. We are Riemer Dijkstra, Otto Márton, Dionne Gantzert, Johannes Roelink and Mees Meester. For the 'Tweedejaarsproject' our group has been assigned to a company, Sigrow. They came up with a challenge for us to solve in four weeks.
+Erudite is a group of five motivated Artificial Intelligence second year bachelor students. We are Riemer Dijkstra, Otto Márton, Dionne Gantzert, Johannes Roelink and Mees Meester. For the 'Tweedejaarsproject' our group has been assigned to a company, Sigrow. They came up with a challenge for us to solve in four weeks.
 
 ## Introduction
 *This introduction can be found in erudite2020/Final Report and Recommendation/Final Report.pdf*
@@ -24,7 +24,7 @@ This repository contains of two repositories. The ['/Final Report and Recommenda
 ### Using the polynomial fit model
 The [polynomial_fit.ipynb](<Polynomial Regression and Random Forest/polynomial_fit.ipynb/>) is made interactive, by asking for user input. The program is run as follows. If you are not familiar with Jupytor Notebook, [here](https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook?utm_source=adwords_ppc&utm_campaignid=898687156&utm_adgroupid=48947256715&utm_device=c&utm_keyword=&utm_matchtype=b&utm_network=g&utm_adpostion=&utm_creative=332602034352&utm_targetid=dsa-473406581035&utm_loc_interest_ms=&utm_loc_physical_ms=9065312&gclid=EAIaIQobChMI143hk6yb6gIVlUMYCh2a6wDJEAAYASAAEgIwvPD_BwE) is a handy tutorial.
 
-We tried to make the Jupyter Notebook as user friendly as possible, so if all cells are run the user will be asked for input, like the directory of the datasets and if the data needs to be divided by weekly data (to create more usable data). The Jupyter Notebook can be used on more data as well. So every time the growth of a plant is measured the data can simply be added in [Polynomial Regression and Random Forest/data/](<Polynomial Regression and Random Forest/data/>) repository(for example the data of the 5 teams of the greenhouse challenge). Please make sure the directory you add with data has the same directories and features as the one in the greenhouse challenge.
+We tried to make the Jupyter Notebook as user friendly as possible, so if all cells are run the user will be asked for input, like the directory of the datasets and if the data needs to be divided by weekly data (to create more usable data). The Jupyter Notebook can be used on more data as well. So every time the growth of a plant is measured the data can simply be added in [Polynomial Regression and Random Forest/data/](<Polynomial Regression and Random Forest/data/>) repository(for example the data of the five teams of the greenhouse challenge). Please make sure the directory you add with data has the same directories and features as the one in the greenhouse challenge.
 
 ## Results
 ### Cleaned data
