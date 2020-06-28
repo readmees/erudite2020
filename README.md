@@ -37,7 +37,7 @@ Because of missing data points and inconsistent units of measurement, the data h
 ![](https://imgur.com/ABIU4m2.png) ![](https://imgur.com/mbGukqX.png)
 ![](https://imgur.com/5gauDK6.png) ![](https://imgur.com/jIrGrvA.png) 
 
-For more clarification of the what the features mean, there is a relevant part of the [ReadMe.pdf](<Polynomial Regression and Random Forest/data/DataReadMe.pdf/>) of the data below.
+For more clarification of the what the features mean, there is a relevant part of the [DataReadMe.pdf](<Polynomial Regression and Random Forest/data/DataReadMe.pdf/>) of the data below.
 
 *Column heading Parameter description Unit Interval Dataset name Type Comments Data collection*
 ![](https://imgur.com/iAl45aq.png)
